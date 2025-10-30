@@ -8,14 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-import java.time.Duration;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class AuthenticationTest {
@@ -45,13 +37,6 @@ public class AuthenticationTest {
         emailFiel.sendKeys(email);
         passwordFiel.sendKeys(password);
         submitButton.click();
-//        WebDriverWait wait = new WebDriverWait(WebDriver,Duration.ofSeconds(6));
-//        wait.until(ExpectedConditions.or(
-//                ExpectedConditions.urlToBe("https://hoctotlamhay.vn/")
-//        ));
-//        //kiểm tra
-//        String url = WebDriver.getCurrentUrl();
-//        assertEquals("https://hoctotlamhay.vn/",url);
     }
     @ParameterizedTest
     @CsvSource({
@@ -69,12 +54,6 @@ public class AuthenticationTest {
         emailFiel.sendKeys(email);
         passwordFiel.sendKeys(password);
         submitButton.click();
-//        WebDriverWait wait = new WebDriverWait(WebDriver, Duration.ofSeconds(8));
-//        wait.until(ExpectedConditions.urlContains("https://hoctotlamhay.vn/"));
-//        WebElement namElement = wait.until(ExpectedConditions.presenceOfElementLocated(
-//                By.xpath("//*[contains(text,'"+ expectedName +"')]")
-//        ));
-//        assertTrue(namElement.isDisplayed(),"Không tìm thấy tên"+expectedName);
     }
     @AfterAll
     public static void tearDown(){
